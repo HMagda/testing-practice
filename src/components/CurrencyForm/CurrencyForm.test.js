@@ -19,6 +19,7 @@ describe("Component CurrencyForm", () => {
     ];
 
     for (const testObj of testCases) {
+      
       // render component
       render(<CurrencyForm action={action} />);
 
