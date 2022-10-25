@@ -69,8 +69,8 @@ describe("Component ResultBox", () => {
   it("should render proper info about conversion to the same type", () => {
     const testCases = [
       {amount: 100, from: "PLN", to: "PLN"},
-      {amount: 20, from: "PLN", to: "PLN"},
       {amount: 200, from: "USD", to: "USD"},
+      {amount: 20, from: "PLN", to: "PLN"},
       {amount: 345, from: "USD", to: "USD"},
     ];
 
@@ -101,9 +101,9 @@ describe("Component ResultBox", () => {
   it('should render "Wrong value..." when input is lower than zero', () => {
     const testCases = [
       {amount: -100, from: "USD", to: "PLN"},
-      {amount: -20, from: "USD", to: "PLN"},
+      {amount: -20, from: "PLN", to: "USD"},
       {amount: -200, from: "USD", to: "PLN"},
-      {amount: -345, from: "USD", to: "PLN"},
+      {amount: -345, from: "PLN", to: "USD"},
     ];
 
     for (const testObj of testCases) {
